@@ -4,13 +4,13 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { useWindowDimensions } from "@/hooks/useWindowDimension";
 import { SKILLS } from "./content";
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
+const container = (width: number = 1024) => ({
+  hidden: { opacity: 1, scale: width < 365 ? 0 : 1 },
   visible: {
     opacity: 1,
     scale: 1,
   },
-};
+});
 
 /** This delays make the items appear in diagonal. Thats a good animation practice, that makes the user attention go from top left to bottom right. */
 
@@ -56,7 +56,7 @@ export default function SkillsList() {
       ref={ref}
       layout
       className="flex flex-wrap gap-8 lg:gap-20 justify-center items-center w-[90vw] max-w-[400px] lg:max-w-[900px] h-full p-5 mt-10"
-      variants={container}
+      variants={container(width)}
       initial="hidden"
       animate={controls}
     >
