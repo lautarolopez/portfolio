@@ -6,10 +6,12 @@ import NaraLogo from "@/components/NaraLogo";
 import LangButton from "@/components/LangButton";
 import SwitchButton from "@/components/SwitchButton";
 import HamburgerButton from "@/components/HamburgerButton";
-import { LINKS } from "./links";
+import { useLang } from "@/contexts/LangContext";
+import content from "@/content.json";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLang();
   const menuRef = useRef<HTMLMenuElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -46,13 +48,13 @@ export default function Header() {
             : "hidden"
         }`}
       >
-        {LINKS.map((link) => (
+        {content.header.links.map((link) => (
           <a
             key={link.href}
             href={link.href}
             className="dark:text-primary-dark text-primary-light lg:text-gray-700 lg:dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 lg:text-3xl text-xl font-bold"
           >
-            {link.name}
+            {link.name[lang]}
           </a>
         ))}
         <span className="flex gap-3 lg:hidden">

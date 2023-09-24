@@ -2,12 +2,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import NaraIcon from "@/components/Icons/NaraIcon";
+import Skeleton from "@/components/Skeleton";
 
 export default function NaraButton() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) return <Skeleton height={40} width={40} />;
 
   return (
     <motion.div

@@ -10,9 +10,9 @@ export default function LandingImage() {
   return (
     <motion.div
       className="relative flex items-center justify-center"
-      initial={{ opacity: 0, y: -100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5 }}
+      initial={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.5, ease: "easeOut" }}
     >
       <svg viewBox="0 0 100 100" className="w-[95vw] max-w-[500px]">
         <defs>

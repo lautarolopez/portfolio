@@ -2,51 +2,47 @@
 import { motion } from "framer-motion";
 import ResumeButton from "@/components/ResumeButton";
 import LandingImage from "@/components/LandingImage";
+import { useLang } from "@/contexts/LangContext";
+import content from "@/content.json";
 
 export default function LandingSection() {
+  const { lang } = useLang();
+
   return (
     <section className="w-full min-h-[97vh] flex flex-col-reverse lg:flex-row pt-20 lg:pt-0 justify-center items-center lg:justify-around">
       <div>
         <motion.h1
           className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-white"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, ease: "easeOut" }}
         >
-          Lautaro López
+          {content.landing.title}
         </motion.h1>
         <motion.h2
           className="text-4xl font-bold text-white"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, ease: "easeOut" }}
         >
-          React/Node Developer
+          {content.landing.subtitle[lang]}
         </motion.h2>
         <motion.p
-          className="dark:text-slate-400 text-slate-800 lg:w-[30vw] text-xl mt-5"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          className="dark:text-slate-300 text-slate-800 lg:w-[30vw] text-xl mt-5"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, ease: "easeOut" }}
         >
-          I am a fullstack developer from{" "}
-          <b className="font-bold text-transparent bg-clip-text bg-gradient-to-b dark:from-blue-300 from-blue-700 dark:to-white to-white">
-            Argentina
-          </b>{" "}
-          with a strong foundation in both front-end and back-end technologies.
-          My journey in the world of web development began with a fascination
-          for crafting beautiful, user-centric interfaces. Over the years, I
-          honed my skills to become a versatile problem solver who thrives on
-          challenges.
+          {content.landing.paragraph[lang]}
         </motion.p>
         <motion.span
           className="flex justify-around items-center gap-3 mt-5 lg:w-[30vw]"
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5, ease: "easeOut" }}
         >
           <a href="#" className="text-xl font-bold">
-            Contact
+            {content.landing.contactButton[lang]}
           </a>
           <ResumeButton />
         </motion.span>

@@ -4,6 +4,7 @@ import EarthAmericasIcon from "@/components/Icons/EarthAmericasIcon";
 import { useLang } from "@/contexts/LangContext";
 import { useAnimate } from "framer-motion";
 import { ColorMode } from "@/types";
+import Skeleton from "@/components/Skeleton";
 
 type Props = {
   colorMode: ColorMode;
@@ -16,7 +17,7 @@ export default function SwitchButton({ colorMode }: Props) {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) return <Skeleton height={40} width={40} />;
 
   const handleClick = () => {
     animate([

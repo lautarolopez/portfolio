@@ -2,6 +2,7 @@
 
 import { forwardRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
+import Skeleton from "@/components/Skeleton";
 
 type Props = {
   height?: number;
@@ -28,7 +29,8 @@ export default forwardRef<HTMLButtonElement, Props>(function HamburguerButton(
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted)
+    return <Skeleton height={height} width={height} className="lg:hidden" />;
 
   const handleClick = () => {
     controls.start(isOpen ? PATH_VARIANTS.CLOSED : PATH_VARIANTS.OPEN);

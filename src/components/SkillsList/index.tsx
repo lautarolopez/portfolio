@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
+import { useWindowDimensions } from "@/hooks/useWindowDimension";
 import { SKILLS } from "./content";
 
 const container = {
@@ -11,15 +12,27 @@ const container = {
   },
 };
 
-const delays = [0, 1, 2, 1, 2, 3, 2, 3, 4, 3, 4, 5];
+/** This delays make the items appear in diagonal. Thats a good animation practice, that makes the user attention go from top left to bottom right. */
 
-const item = (i: number) => ({
+const delays3Columns = [0, 1, 2, 1, 2, 3, 2, 3, 4, 3, 4, 5];
+
+const delays2Columns = [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6];
+
+const delays1Column = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+const DELAYS = (width: number) => {
+  if (width < 365) return delays1Column;
+  if (width < 1024) return delays2Columns;
+  return delays3Columns;
+};
+
+const item = (i: number, width: number = 1080) => ({
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
     transition: {
-      delay: delays[i] * 0.1,
+      delay: DELAYS(width)[i] * 0.1,
     },
   },
 });
@@ -28,6 +41,9 @@ export default function SkillsList() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const controls = useAnimation();
+  const { width } = useWindowDimensions();
+
+  const iconSize = width && width < 1024 ? 60 : 90;
 
   useEffect(() => {
     if (isInView) {
@@ -44,11 +60,11 @@ export default function SkillsList() {
       initial="hidden"
       animate={controls}
     >
-      {SKILLS.map((skill, index) => (
+      {SKILLS(iconSize).map((skill, index) => (
         <motion.li
           key={skill.name}
           className="lg:w-48 lg:h-48 w-32 h-32 flex flex-col gap-1 items-center justify-center rounded-lg bg-primary-dark dark:bg-primary-light"
-          variants={item(index)}
+          variants={item(index, width)}
         >
           {skill.icon}
           <p className="text-center text-primary-light dark:text-primary-dark text-lg font-bold">

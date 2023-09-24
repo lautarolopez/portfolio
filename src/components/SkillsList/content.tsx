@@ -11,53 +11,61 @@ import FigmaIcon from "@/components/Icons/FigmaIcon";
 import AWSIcon from "@/components/Icons/AWSIcon";
 import TailwindIcon from "@/components/Icons/TailwindIcon";
 
-export const SKILLS = [
+export const SKILLS = (iconSize: number = 60) => [
   {
     name: "React",
-    icon: <ReactIcon height={100} colorMode="regular" />,
+    icon: <ReactIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Next",
-    icon: <NextIcon height={100} colorMode="regular" />,
+    icon: <NextIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Node",
-    icon: <NodeIcon height={100} colorMode="regular" />,
+    icon: <NodeIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Javascript",
-    icon: <JavascriptIcon height={100} colorMode="regular" />,
+    icon: (
+      <JavascriptIcon height={iconSize} width={iconSize} colorMode="regular" />
+    ),
   },
   {
     name: "Typescript",
-    icon: <TypescriptIcon height={100} width={100} colorMode="regular" />,
+    icon: (
+      <TypescriptIcon height={iconSize} width={iconSize} colorMode="regular" />
+    ),
   },
   {
     name: "HTML",
-    icon: <HTMLIcon height={100} colorMode="regular" />,
+    icon: <HTMLIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "CSS",
-    icon: <CSSIcon height={100} colorMode="regular" />,
+    icon: <CSSIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Deno",
-    icon: <DenoIcon height={100} colorMode="regular" />,
+    icon: <DenoIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Postgres",
-    icon: <PostgresIcon height={100} colorMode="regular" />,
+    icon: (
+      <PostgresIcon height={iconSize} width={iconSize} colorMode="regular" />
+    ),
   },
   {
     name: "Figma",
-    icon: <FigmaIcon height={100} colorMode="regular" />,
+    icon: <FigmaIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "AWS",
-    icon: <AWSIcon height={100} colorMode="regular" />,
+    icon: <AWSIcon height={iconSize} width={iconSize} colorMode="regular" />,
   },
   {
     name: "Tailwind",
-    icon: <TailwindIcon height={100} colorMode="regular" />,
+    icon: (
+      <TailwindIcon height={iconSize} width={iconSize} colorMode="regular" />
+    ),
   },
 ];

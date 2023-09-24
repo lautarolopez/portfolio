@@ -2,15 +2,16 @@ import { ColorMode } from "@/types";
 
 type Props = {
   height?: number;
+  width?: number;
   colorMode: ColorMode;
 };
 
-export default function AWSIcon({ height = 40, colorMode }: Props) {
+export default function AWSIcon({ height = 40, width = 40, colorMode }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height={height}
-      width={100}
+      width={width}
       viewBox="0 0 640 512"
       className={`${
         colorMode === "regular"

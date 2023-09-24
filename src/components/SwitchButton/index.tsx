@@ -5,6 +5,7 @@ import LightBulbRegularIcon from "@/components/Icons/LightBulbRegularIcon";
 import { useTheme } from "next-themes";
 import { useAnimate } from "framer-motion";
 import { ColorMode } from "@/types";
+import Skeleton from "@/components/Skeleton";
 
 type Props = {
   colorMode: ColorMode;
@@ -17,11 +18,11 @@ export default function SwitchButton({ colorMode }: Props) {
 
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return null;
+  if (!mounted) return <Skeleton height={40} width={40} />;
 
   const handleClick = () => {
     animate([
-      [scope.current, { rotate: 15, y: 10 }, { duration: 0.1 }],
+      [scope.current, { rotate: 15, y: 10 }, { duration: 0.05 }],
       [scope.current, { rotate: 0, y: 0 }],
     ]);
     setTheme(theme === "dark" ? "light" : "dark");

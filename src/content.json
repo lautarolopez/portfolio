@@ -1,0 +1,39 @@
+{
+  "landing": {
+    "title": "Lautaro López",
+    "subtitle": {
+      "en": "React/Node Developer",
+      "es": "Desarrollador React y Node"
+    },
+    "paragraph": {
+      "en": "I am a fullstack developer from Argentina with a strong foundation in both front-end and back-end technologies. My journey in the world of web development began with a fascination for crafting beautiful, user-centric interfaces. Over the years, I honed my skills to become a versatile problem solver who thrives on challenges.",
+      "es": "Soy un desarrollador fullstack de Argentina con una base sólida en tecnologías front-end y back-end. Mi viaje en el mundo del desarrollo web comenzó con una fascinación por crear interfaces hermosas y centradas en el usuario. Con el tiempo, perfeccioné mis habilidades para convertirme en un solucionador de problemas versátil que prospera en los desafíos."
+    },
+    "contactButton": {
+      "en": "Contact",
+      "es": "Contacto"
+    },
+    "resumeButton": {
+      "en": "Resume",
+      "es": "Currículum"
+    }
+  },
+  "header": {
+    "links": [
+      {
+        "name": {
+          "en": "Home",
+          "es": "Inicio"
+        },
+        "href": "#"
+      },
+      {
+        "name": {
+          "en": "About",
+          "es": "Sobre mi"
+        },
+        "href": "#experience"
+      }
+    ]
+  }
+}
