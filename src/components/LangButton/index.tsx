@@ -39,6 +39,7 @@ export default function SwitchButton({ colorMode }: Props) {
     <button
       type="button"
       className="flex items-center gap-2"
+      title="Switch language"
       onClick={handleClick}
     >
       <span

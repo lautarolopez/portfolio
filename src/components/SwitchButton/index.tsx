@@ -29,7 +29,12 @@ export default function SwitchButton({ colorMode }: Props) {
   };
 
   return (
-    <button ref={scope} onClick={handleClick} type="button">
+    <button
+      ref={scope}
+      onClick={handleClick}
+      type="button"
+      title="Change theme"
+    >
       {theme === "dark" ? (
         <LightBulbSolidIcon height={40} colorMode={colorMode} />
       ) : (

@@ -3,8 +3,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import NaraIcon from "@/components/Icons/NaraIcon";
 import Skeleton from "@/components/Skeleton";
+import { type } from "os";
 
-export default function NaraButton() {
+type NaraButtonProps = {
+  className?: string;
+};
+
+export default function NaraButton({ className }: NaraButtonProps) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
 
@@ -12,6 +17,7 @@ export default function NaraButton() {
 
   return (
     <motion.div
+      className={className}
       initial={{ rotate: 0 }}
       animate={{ rotate: 360 }}
       transition={{

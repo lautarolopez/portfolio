@@ -35,14 +35,14 @@ export default function Header() {
   }, [menuRef]);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 fixed top-0 left-0 w-full dark:bg-primary-dark/20 bg-primary-light/20 z-30 backdrop-blur-sm">
-      <NaraLogo />
+    <nav className="flex lg:grid lg:grid-cols-3 justify-between items-center flex-wrap p-6 fixed top-0 left-0 w-full dark:bg-primary-dark/20 bg-primary-light/20 z-30 backdrop-blur-sm">
+      <NaraLogo className="justify-self-start" />
       <motion.menu
         ref={menuRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`lg:flex gap-3 items-center ${
+        className={`lg:flex gap-7 items-center flex-1 justify-self-center ${
           open
             ? "flex absolute right-4 top-20 flex-col bg-primary-dark/90 dark:bg-primary-light/90 p-4 rounded-md"
             : "hidden"
@@ -62,7 +62,7 @@ export default function Header() {
           <SwitchButton colorMode="regular" />
         </span>
       </motion.menu>
-      <span className="lg:flex gap-3 hidden">
+      <span className="lg:flex lg:justify-self-end gap-3 hidden">
         <LangButton colorMode="inverted" />
         <SwitchButton colorMode="inverted" />
       </span>

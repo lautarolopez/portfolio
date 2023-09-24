@@ -53,7 +53,7 @@ export default function LandingImage() {
         height={500}
         fill={false}
         src={theme === "dark" ? "/images/blackt.webp" : "/images/whitet.webp"}
-        className="absolute bottom-0 left-0 w-[95vw] max-w-[500px]"
+        className="absolute bottom-0 left-0 w-[95vw] h-auto max-w-[500px]"
         style={{
           clipPath: "circle(50% at 50% 50%)",
         }}

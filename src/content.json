@@ -1,4 +1,22 @@
 {
+  "header": {
+    "links": [
+      {
+        "name": {
+          "en": "Home",
+          "es": "Inicio"
+        },
+        "href": "#"
+      },
+      {
+        "name": {
+          "en": "Skills",
+          "es": "Tecnologías"
+        },
+        "href": "#skills"
+      }
+    ]
+  },
   "landing": {
     "title": "Lautaro López",
     "subtitle": {
@@ -18,22 +36,10 @@
       "es": "Currículum"
     }
   },
-  "header": {
-    "links": [
-      {
-        "name": {
-          "en": "Home",
-          "es": "Inicio"
-        },
-        "href": "#"
-      },
-      {
-        "name": {
-          "en": "About",
-          "es": "Sobre mi"
-        },
-        "href": "#experience"
-      }
-    ]
+  "skills": {
+    "title": {
+      "en": "Skills and Tools",
+      "es": "Tecnologías y Herramientas"
+    }
   }
 }
