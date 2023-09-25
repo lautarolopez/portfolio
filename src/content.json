@@ -41,5 +41,108 @@
       "en": "Skills and Tools",
       "es": "Tecnologías y Herramientas"
     }
+  },
+  "experience": {
+    "title": {
+      "en": "Experience",
+      "es": "Experiencia"
+    },
+    "experiences": [
+      {
+        "company": "BPMX",
+        "position": {
+          "en": "Java Developer",
+          "es": "Desarrollador Java"
+        },
+        "startDate": {
+          "en": "November 2020",
+          "es": "Noviembre 2020"
+        },
+        "endDate": {
+          "en": "August 2021",
+          "es": "Agosto 2021"
+        },
+        "description": {
+          "en": "Worked on a private java framework and plugin. Also participated in the development of the company website.",
+          "es": "Trabajé en un framework y plugin privado de java. También participé en el desarrollo del sitio web de la empresa."
+        },
+        "technologies": ["Java", "Gradle", "Javascript", "GWT", "AWS", "React"]
+      },
+      {
+        "company": "Softtek",
+        "position": {
+          "en": "React/Node Developer",
+          "es": "Desarrollador React/Node"
+        },
+        "startDate": {
+          "en": "August 2021",
+          "es": "Agosto 2021"
+        },
+        "endDate": {
+          "en": "December 2021",
+          "es": "Diciembre 2021"
+        },
+        "description": {
+          "en": "A prospect enrollment application for a major health insurance company in Argentina, with it respective dashboard to help employees handle applications.",
+          "es": "Una aplicación de inscripción de prospectos para una importante compañía de seguros de salud en Argentina, con su respectivo panel para ayudar a los empleados a gestionar las solicitudes."
+        },
+        "technologies": ["React", "Node", "Typescript", "GCP", "PostgreSQL"]
+      },
+      {
+        "company": "Tap Billetera/Payana",
+        "position": {
+          "en": "React/Node Developer",
+          "es": "Desarrollador React/Node"
+        },
+        "startDate": {
+          "en": "December 2021",
+          "es": "Diciembre 2021"
+        },
+        "endDate": {
+          "en": "October 2022",
+          "es": "Octubre 2022"
+        },
+        "description": {
+          "en": "A digital wallet in React Native with a microservices-based architecture in the backend, used by thousands of users in Argentina. The application allowed users to receive and send money to and from the wallet, pay various services such as bills, subscriptions, recharges, etc., among other features. After the application was discontinued, the company moved to another application that helped small businesses handle payments to providers and employees.",
+          "es": "Una billetera digital en React Native con una arquitectura basada en microservicios en el backend, utilizada por miles de usuarios en Argentina. La aplicación permitía a los usuarios recibir y enviar dinero hacia y desde la billetera, pagar diversos servicios como facturas, suscripciones, recargas, etc., entre otras funciones. Después de que la aplicación fue descontinuada, la empresa se trasladó a otra aplicación que ayudaba a las pequeñas empresas a gestionar los pagos a proveedores y empleados."
+        },
+        "technologies": [
+          "React",
+          "React Native",
+          "Node",
+          "Typescript",
+          "AWS",
+          "PostgreSQL",
+          "DynamoDB"
+        ]
+      },
+      {
+        "company": "Symfa",
+        "position": {
+          "en": "React/Node Developer",
+          "es": "Desarrollador React/Node"
+        },
+        "startDate": {
+          "en": "October 2022",
+          "es": "Octubre 2022"
+        },
+        "endDate": {
+          "en": "Present",
+          "es": "Actualidad"
+        },
+        "description": {
+          "en": "I joined Symfa to participate in a PWA project for Reynolds American. In a few months, I helped to improve the accessibility of the app, working with Handlebars, raw CSS, and TypeScript in the lambda tier of the application. After that, I moved to research improvements for the in-company applications while waiting for a new project.",
+          "es": "Me uní a Symfa para participar en un proyecto PWA para Reynolds American. En pocos meses, ayudé a mejorar la accesibilidad de la aplicación, trabajando con Handlebars, CSS en bruto y TypeScript en la capa lambda de la aplicación. Después de eso, me dediqué a investigar mejoras para las aplicaciones internas mientras esperaba un nuevo proyecto."
+        },
+        "technologies": [
+          "React",
+          "Node",
+          "Typescript",
+          "AWS",
+          "PostgreSQL",
+          "Handlebars"
+        ]
+      }
+    ]
   }
 }
