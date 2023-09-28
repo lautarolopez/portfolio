@@ -1,13 +1,13 @@
 import SkillsList from "@/components/SkillsList";
-import SkillsTitle from "@/components/SkillsTitle";
+import DynamicTitle from "@/components/DynamicTitle";
 
 export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="w-full min-h-[97vh] flex flex-col justify-center items-center lg:justify-around pt-32 lg:pt-0"
+      className="w-full md:min-h-[97vh] flex flex-col justify-center items-center pt-32 lg:pt-0 snap-start"
     >
-      <SkillsTitle />
+      <DynamicTitle section="skills" />
       <SkillsList />
     </section>
   );

@@ -14,6 +14,8 @@ const container = (width: number = 1024) => ({
 
 /** This delays make the items appear in diagonal. Thats a good animation practice, that makes the user attention go from top left to bottom right. */
 
+const delays4Columns = [0, 1, 2, 3, 1, 2, 3, 5, 2, 3, 4, 5];
+
 const delays3Columns = [0, 1, 2, 1, 2, 3, 2, 3, 4, 3, 4, 5];
 
 const delays2Columns = [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6];
@@ -22,8 +24,9 @@ const delays1Column = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 const DELAYS = (width: number) => {
   if (width < 365) return delays1Column;
-  if (width < 1024) return delays2Columns;
-  return delays3Columns;
+  if (width < 1025) return delays2Columns;
+  if (width < 1165) return delays3Columns;
+  return delays4Columns;
 };
 
 const item = (i: number, width: number = 1080) => ({
@@ -55,7 +58,7 @@ export default function SkillsList() {
     <motion.ul
       ref={ref}
       layout
-      className="flex flex-wrap gap-8 lg:gap-20 justify-center items-center w-[90vw] max-w-[400px] lg:max-w-[900px] h-full p-5 mt-10"
+      className="flex flex-wrap gap-8 lg:gap-20 justify-center items-center w-[90vw] max-w-[400px] lg:max-w-[1050px] p-5 mt-10"
       variants={container(width)}
       initial="hidden"
       animate={controls}
