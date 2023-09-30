@@ -59,6 +59,7 @@ export default function LandingImage() {
         width={width && width < 600 ? 250 : 500}
         height={width && width < 600 ? 250 : 500}
         fill={false}
+        priority
         src={theme === "dark" ? "/images/blackt.webp" : "/images/whitet.webp"}
         className={`absolute bottom-0 left-0 w-[95vw] h-auto ${
           width && width < 600 ? "max-w-[250px]" : "max-w-[500px]"
