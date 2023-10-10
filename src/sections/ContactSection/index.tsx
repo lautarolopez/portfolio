@@ -1,13 +1,13 @@
-import DynamicTitle from "@/components/DynamicTitle";
-import ContactForm from "@/components/ContactForm";
+import DynamicTitle from '@/components/DynamicTitle';
+import ContactForm from '@/components/ContactForm';
 
 export default function ContactSection() {
   return (
     <section
-      id="contact"
-      className="w-full md:min-h-[97vh] flex flex-col justify-center items-center pt-32 lg:pt-0 snap-start xl:scroll-m-28"
+      id='contact'
+      className='flex w-full snap-start flex-col items-center justify-center pt-32 md:min-h-[97vh] lg:pt-0 xl:scroll-m-28'
     >
-      <DynamicTitle section="contact" />
+      <DynamicTitle section='contact' />
       <ContactForm />
     </section>
   );

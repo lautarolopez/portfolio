@@ -1,11 +1,11 @@
-"use client";
-import { useState, useEffect } from "react";
-import LightBulbSolidIcon from "@/components/Icons/LightBulbSolidIcon";
-import LightBulbRegularIcon from "@/components/Icons/LightBulbRegularIcon";
-import { useTheme } from "next-themes";
-import { useAnimate } from "framer-motion";
-import { ColorMode } from "@/types";
-import Skeleton from "@/components/Skeleton";
+'use client';
+import { useState, useEffect } from 'react';
+import LightBulbSolidIcon from '@/components/Icons/LightBulbSolidIcon';
+import LightBulbRegularIcon from '@/components/Icons/LightBulbRegularIcon';
+import { useTheme } from 'next-themes';
+import { useAnimate } from 'framer-motion';
+import { ColorMode } from '@/types';
+import Skeleton from '@/components/Skeleton';
 
 type Props = {
   colorMode: ColorMode;
@@ -25,17 +25,17 @@ export default function SwitchButton({ colorMode }: Props) {
       [scope.current, { rotate: 15, y: 10 }, { duration: 0.05 }],
       [scope.current, { rotate: 0, y: 0 }],
     ]);
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (
     <button
       ref={scope}
       onClick={handleClick}
-      type="button"
-      title="Change theme"
+      type='button'
+      title='Change theme'
     >
-      {theme === "dark" ? (
+      {theme === 'dark' ? (
         <LightBulbSolidIcon height={40} colorMode={colorMode} />
       ) : (
         <LightBulbRegularIcon height={40} colorMode={colorMode} />

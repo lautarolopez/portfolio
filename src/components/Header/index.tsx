@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
-import NaraLogo from "@/components/NaraLogo";
-import LangButton from "@/components/LangButton";
-import SwitchButton from "@/components/SwitchButton";
-import HamburgerButton from "@/components/HamburgerButton";
-import { useLang } from "@/contexts/LangContext";
-import content from "@/content.json";
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import NaraLogo from '@/components/NaraLogo';
+import LangButton from '@/components/LangButton';
+import SwitchButton from '@/components/SwitchButton';
+import HamburgerButton from '@/components/HamburgerButton';
+import { useLang } from '@/contexts/LangContext';
+import content from '@/content.json';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -30,46 +30,46 @@ export default function Header() {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuRef]);
 
   return (
-    <nav className="flex lg:grid lg:grid-cols-3 justify-between items-center flex-wrap p-6 fixed top-0 left-0 w-full dark:bg-primary-dark/20 bg-primary-light/20 z-30 backdrop-blur-sm">
-      <NaraLogo className="justify-self-start" />
+    <nav className='fixed left-0 top-0 z-30 flex w-full flex-wrap items-center justify-between bg-primary-light/20 p-6 backdrop-blur-sm dark:bg-primary-dark/20 lg:grid lg:grid-cols-3'>
+      <NaraLogo className='justify-self-start' />
       <motion.menu
         ref={menuRef}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className={`lg:flex gap-7 items-center flex-1 justify-self-center ${
+        className={`flex-1 items-center gap-7 justify-self-center lg:flex ${
           open
-            ? "flex absolute right-4 top-20 flex-col bg-primary-dark/90 dark:bg-primary-light/90 p-4 rounded-md"
-            : "hidden"
+            ? 'absolute right-4 top-20 flex flex-col rounded-md bg-primary-dark/90 p-4 dark:bg-primary-light/90'
+            : 'hidden'
         }`}
       >
         {content.header.links.map((link) => (
           <a
             key={link.href}
             href={link.href}
-            className="dark:text-primary-dark text-primary-light lg:text-gray-700 lg:dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 lg:text-3xl text-xl font-bold"
+            className='text-xl font-bold text-primary-light hover:text-gray-900 dark:text-primary-dark dark:hover:text-gray-100 lg:text-3xl lg:text-gray-700 lg:dark:text-gray-300'
           >
             {link.name[lang]}
           </a>
         ))}
-        <span className="flex gap-3 lg:hidden">
-          <LangButton colorMode="regular" />
-          <SwitchButton colorMode="regular" />
+        <span className='flex gap-3 lg:hidden'>
+          <LangButton colorMode='regular' />
+          <SwitchButton colorMode='regular' />
         </span>
       </motion.menu>
-      <span className="lg:flex lg:justify-self-end gap-3 hidden">
-        <LangButton colorMode="inverted" />
-        <SwitchButton colorMode="inverted" />
+      <span className='hidden gap-3 lg:flex lg:justify-self-end'>
+        <LangButton colorMode='inverted' />
+        <SwitchButton colorMode='inverted' />
       </span>
       <HamburgerButton
         ref={buttonRef}
         height={40}
-        className="lg:hidden dark:fill-primary-light fill-primary-dark"
+        className='fill-primary-dark dark:fill-primary-light lg:hidden'
         onClick={handleClick}
       />
     </nav>

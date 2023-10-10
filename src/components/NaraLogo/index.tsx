@@ -1,9 +1,9 @@
-"use client";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import NaraIcon from "@/components/Icons/NaraIcon";
-import Skeleton from "@/components/Skeleton";
-import { type } from "os";
+'use client';
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import NaraIcon from '@/components/Icons/NaraIcon';
+import Skeleton from '@/components/Skeleton';
+import { type } from 'os';
 
 type NaraButtonProps = {
   className?: string;
@@ -24,10 +24,10 @@ export default function NaraButton({ className }: NaraButtonProps) {
         repeatDelay: 5,
         duration: 2,
         repeat: Infinity,
-        repeatType: "loop",
+        repeatType: 'loop',
       }}
     >
-      <NaraIcon height={40} colorMode="inverted" />
+      <NaraIcon height={40} colorMode='inverted' />
     </motion.div>
   );
 }

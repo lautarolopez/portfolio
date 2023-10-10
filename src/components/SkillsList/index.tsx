@@ -1,8 +1,8 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
-import { useWindowDimensions } from "@/hooks/useWindowDimension";
-import { SKILLS } from "./content";
+'use client';
+import { useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from 'framer-motion';
+import { useWindowDimensions } from '@/hooks/useWindowDimension';
+import { SKILLS } from './content';
 
 const container = (width: number = 1024) => ({
   hidden: { opacity: 1, scale: width < 365 ? 0 : 1 },
@@ -50,7 +50,7 @@ export default function SkillsList() {
 
   useEffect(() => {
     if (isInView) {
-      controls.start("visible");
+      controls.start('visible');
     }
   }, [isInView, controls]);
 
@@ -58,19 +58,19 @@ export default function SkillsList() {
     <motion.ul
       ref={ref}
       layout
-      className="flex flex-wrap gap-8 lg:gap-20 justify-center items-center w-[90vw] max-w-[400px] lg:max-w-[1050px] p-5 mt-10"
+      className='mt-10 flex w-[90vw] max-w-[400px] flex-wrap items-center justify-center gap-8 p-5 lg:max-w-[1050px] lg:gap-20'
       variants={container(width)}
-      initial="hidden"
+      initial='hidden'
       animate={controls}
     >
       {SKILLS(iconSize).map((skill, index) => (
         <motion.li
           key={skill.name}
-          className="lg:w-48 lg:h-48 w-32 h-32 flex flex-col gap-1 items-center justify-center rounded-lg bg-primary-dark dark:bg-primary-light"
+          className='flex h-32 w-32 flex-col items-center justify-center gap-1 rounded-lg bg-primary-dark dark:bg-primary-light lg:h-48 lg:w-48'
           variants={item(index, width)}
         >
           {skill.icon}
-          <p className="text-center text-primary-light dark:text-primary-dark text-lg font-bold">
+          <p className='text-center text-lg font-bold text-primary-light dark:text-primary-dark'>
             {skill.name}
           </p>
         </motion.li>

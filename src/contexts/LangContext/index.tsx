@@ -1,11 +1,11 @@
-"use client";
-import React, { createContext, useState } from "react";
+'use client';
+import React, { createContext, useState } from 'react';
 
 type LangProviderProps = {
   children: React.ReactNode;
 };
 
-export const LangOptions = ["en", "es"] as const;
+export const LangOptions = ['en', 'es'] as const;
 export type LangOptionsType = (typeof LangOptions)[number];
 export type LangContextType = {
   lang: LangOptionsType;
@@ -13,12 +13,12 @@ export type LangContextType = {
 };
 
 export const LangContext = createContext<LangContextType>({
-  lang: "en",
+  lang: 'en',
   setLang: () => {},
 });
 
 export const LangProvider = ({ children }: LangProviderProps) => {
-  const [lang, setLang] = useState<LangOptionsType>("en");
+  const [lang, setLang] = useState<LangOptionsType>('en');
 
   return (
     <LangContext.Provider value={{ lang, setLang }}>

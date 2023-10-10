@@ -1,3 +1,3 @@
-export type ColorScheme = "dark" | "light";
+export type ColorScheme = 'dark' | 'light';
 
-export type ColorMode = "regular" | "inverted";
+export type ColorMode = 'regular' | 'inverted';
