@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import { htmlTemplate } from './template';
 
 export async function sendEmail(name: string, email: string, message: string) {
   const transporter = nodemailer.createTransport({
@@ -12,8 +13,9 @@ export async function sendEmail(name: string, email: string, message: string) {
   const mailOptions = {
     from: process.env.NODEMAILER_EMAIL,
     to: process.env.WORK_EMAIL,
-    subject: `${name} send a message through your portfolio website,`,
+    subject: `Portfolio: Message from ${name}.`,
     text: `Name: ${name} \nEmail: ${email} \nMessage: ${message}`,
+    html: htmlTemplate({ name, email, message }),
   };
 
   await new Promise((resolve, reject) => {

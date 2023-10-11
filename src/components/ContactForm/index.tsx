@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className='flex w-full flex-col items-center gap-10 py-20 md:p-20'
+      className='flex w-full flex-col items-center gap-10 py-20 md:max-w-[1000px] md:p-20'
       onSubmit={handleSubmit(onSubmit)}
       autoComplete='off'
     >
