@@ -13,6 +13,9 @@ const container = (width: number = 1024) => ({
 });
 
 /** This delays make the items appear in diagonal. Thats a good animation practice, that makes the user attention go from top left to bottom right. */
+const delays6Columns = [0, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6];
+
+const delays5Columns = [0, 1, 2, 3, 4, 1, 2, 3, 4, 5, 3, 4];
 
 const delays4Columns = [0, 1, 2, 3, 1, 2, 3, 5, 2, 3, 4, 5];
 
@@ -23,10 +26,13 @@ const delays2Columns = [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6];
 const delays1Column = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 const DELAYS = (width: number) => {
-  if (width < 365) return delays1Column;
-  if (width < 1025) return delays2Columns;
-  if (width < 1165) return delays3Columns;
-  return delays4Columns;
+  if (width < 330) return delays1Column;
+  if (width < 490) return delays2Columns;
+  if (width < 650) return delays3Columns;
+  if (width < 1024) return delays4Columns;
+  if (width < 1058) return delays5Columns;
+  if (width < 1280) return delays6Columns;
+  return delays5Columns;
 };
 
 const item = (i: number, width: number = 1080) => ({
@@ -46,7 +52,7 @@ export default function SkillsList() {
   const controls = useAnimation();
   const { width } = useWindowDimensions();
 
-  const iconSize = width && width < 1024 ? 60 : 90;
+  const iconSize = width && width < 1280 ? 40 : 70;
 
   useEffect(() => {
     if (isInView) {
@@ -58,7 +64,7 @@ export default function SkillsList() {
     <motion.ul
       ref={ref}
       layout
-      className='mt-10 flex w-[90vw] max-w-[400px] flex-wrap items-center justify-center gap-8 p-5 lg:max-w-[1050px] lg:gap-20'
+      className='mt-10 flex w-[90vw] max-w-[700px] flex-wrap items-center justify-center gap-8 p-5 md:max-w-[700px] lg:max-w-[1050px] lg:gap-12'
       variants={container(width)}
       initial='hidden'
       animate={controls}
@@ -66,7 +72,7 @@ export default function SkillsList() {
       {SKILLS(iconSize).map((skill, index) => (
         <motion.li
           key={skill.name}
-          className='flex h-32 w-32 flex-col items-center justify-center gap-1 rounded-lg bg-primary-dark dark:bg-primary-light lg:h-48 lg:w-48'
+          className='flex h-28 w-28 flex-col items-center justify-center gap-1 rounded-lg bg-primary-dark dark:bg-primary-light xl:h-36 xl:w-36'
           variants={item(index, width)}
         >
           {skill.icon}
