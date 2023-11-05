@@ -64,7 +64,7 @@
     "experiences": [
       {
         "company": "Symfa",
-        "image": ["/images/symfa.webp"],
+        "image": "/images/symfa.webp",
         "position": {
           "en": "React/Node Developer",
           "es": "Desarrollador React/Node"
@@ -74,8 +74,8 @@
           "es": "Octubre 2022"
         },
         "endDate": {
-          "en": "Present",
-          "es": "Actualidad"
+          "en": "October 2023",
+          "es": "Octubre 2023"
         },
         "description": {
           "en": "I joined Symfa to participate in a PWA project for Reynolds American. In a few months, I helped to improve the accessibility of the app, working with Handlebars, raw CSS, and TypeScript in the lambda tier of the application. After that, I moved to research improvements for the in-company applications while waiting for a new project.",
@@ -92,7 +92,7 @@
       },
       {
         "company": "Tap Billetera/Payana",
-        "image": ["/images/tap.webp", "/images/payana.webp"],
+        "image": "/images/tap-payana.webp",
         "position": {
           "en": "React/Node Developer",
           "es": "Desarrollador React/Node"
@@ -121,7 +121,7 @@
       },
       {
         "company": "Softtek",
-        "image": ["/images/softtek.webp"],
+        "image": "/images/softtek.webp",
         "position": {
           "en": "React/Node Developer",
           "es": "Desarrollador React/Node"
@@ -142,7 +142,7 @@
       },
       {
         "company": "BPMX",
-        "image": ["/images/bpmx.webp"],
+        "image": "/images/bpmx.webp",
         "position": {
           "en": "Java Developer",
           "es": "Desarrollador Java"
