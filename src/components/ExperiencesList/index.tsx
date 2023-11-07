@@ -60,7 +60,7 @@ export default function ExperiencesList() {
           </button>
         ))}
       </span>
-      <span className='h-[400px] w-full md:w-4/5 md:max-w-2xl' ref={scope}>
+      <span className='min-h-[400px] w-full md:w-4/5 md:max-w-2xl' ref={scope}>
         <span className='flex flex-col'>
           <span className='text-xl font-bold text-primary-dark dark:text-primary-light'>
             {selectedExperienceObject.position[lang]} @{' '}
