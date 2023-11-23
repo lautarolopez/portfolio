@@ -24,6 +24,13 @@
       },
       {
         "name": {
+          "en": "Projects",
+          "es": "Proyectos"
+        },
+        "href": "#projects"
+      },
+      {
+        "name": {
           "en": "Contact",
           "es": "Contacto"
         },
@@ -202,6 +209,30 @@
           "en": "Don't be shy, say hello!",
           "es": "Contame algo!"
         }
+      }
+    }
+  },
+  "projects": {
+    "title": {
+      "en": "Projects",
+      "es": "Proyectos"
+    },
+    "cat": {
+      "title": {
+        "en": "CAT Filmmaker",
+        "es": "CAT Filmmaker"
+      },
+      "year": 2021,
+      "technologies": ["React", "Next.js", "Sanity", "Node", "Figma"],
+      "image": "/images/catfilmmaker.webp",
+      "link": "https://catfilmmaker.com",
+      "hoverText": {
+        "en": "View",
+        "es": "Ver"
+      },
+      "description": {
+        "en": "Portfolio for a wedding photographer and filmmaker, with a respective dashboard to handle content. I transformed client needs into a beautiful design and implemented it into code with its functionality.",
+        "es": "Portfolio para un fotógrafo y cineasta de bodas, con su respectivo panel para manejar el contenido. Transformé las necesidades del cliente en un hermoso diseño y lo implementé en código con su funcionalidad."
       }
     }
   }

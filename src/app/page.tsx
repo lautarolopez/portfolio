@@ -2,6 +2,7 @@ import LandingSection from '@/sections/LandingSection';
 import SkillsSection from '@/sections/SkillsSection';
 import ExperienceSection from '@/sections/ExperienceSection';
 import ContactSection from '@/sections/ContactSection';
+import ProjectsSection from '@/sections/ProjectsSection';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <LandingSection />
       <SkillsSection />
       <ExperienceSection />
+      <ProjectsSection />
       <ContactSection />
     </main>
   );

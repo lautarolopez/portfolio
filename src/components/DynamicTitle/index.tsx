@@ -3,7 +3,7 @@ import { useLang } from '@/contexts/LangContext';
 import content from '@/content.json';
 
 type Props = {
-  section: 'skills' | 'experience' | 'contact';
+  section: 'skills' | 'experience' | 'contact' | 'projects';
 };
 
 export default function DynamicTitle({ section }: Props) {
