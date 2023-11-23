@@ -8,6 +8,7 @@ type ButtonStates = 'initial' | 'invalid' | 'loading' | 'success' | 'error';
 type Props = {
   disabled: boolean;
   state?: ButtonStates;
+  text: string;
 };
 
 const buttonStates = {
@@ -108,6 +109,7 @@ const loadingStates = {
 export default function ContactFormButton({
   disabled = false,
   state = 'initial',
+  text,
 }: Props) {
   const [scope, animate] = useAnimate();
 
@@ -141,7 +143,7 @@ export default function ContactFormButton({
       className={`relative flex h-20 items-center justify-center gap-3 bg-gradient-to-br from-primary-dark to-secondary-dark px-4 py-3 text-lg font-bold text-primary-light duration-500 dark:bg-gradient-to-br dark:from-primary-light dark:to-secondary-light dark:text-primary-dark md:px-6 md:py-4 md:text-xl`}
     >
       <motion.span initial={spanStates['initial']} className='absolute'>
-        Submit
+        {text}
       </motion.span>
       <motion.svg
         height={40}

@@ -167,6 +167,42 @@
     "title": {
       "en": "Contact",
       "es": "Contacto"
+    },
+    "form": {
+      "name": {
+        "en": "Name",
+        "es": "Nombre"
+      },
+      "email": {
+        "en": "Email",
+        "es": "Correo electrónico"
+      },
+      "message": {
+        "en": "Message",
+        "es": "Mensaje"
+      },
+      "submit": {
+        "en": "Send",
+        "es": "Enviar"
+      },
+      "errors": {
+        "NAME": {
+          "en": "I need your name!",
+          "es": "Necesito tu nombre!"
+        },
+        "EMAIL": {
+          "en": "I need your email!",
+          "es": "Necesito tu email!"
+        },
+        "EMAIL_INVALID": {
+          "en": "Invalid email!",
+          "es": "Email inválido!"
+        },
+       "MESSAGE": {
+          "en": "Don't be shy, say hello!",
+          "es": "Contame algo!"
+        }
+      }
     }
   }
 }

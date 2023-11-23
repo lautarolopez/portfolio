@@ -1,8 +1,9 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useLang } from '@/contexts/LangContext';
 import ContactFormButton from '../ContactFormButton';
+import content from '@/content.json';
 
 type Inputs = {
   name: string;
@@ -35,6 +36,11 @@ export default function ContactForm() {
   const [submitError, setSubmitError] = useState(false);
   const { lang } = useLang();
   const { register, handleSubmit, formState, reset } = useForm<Inputs>();
+  const {
+    contact: {
+      form: { name, email, message, submit, errors },
+    },
+  } = content;
 
   const wait = (ms: number) =>
     new Promise((resolve) => setTimeout(resolve, ms));
@@ -97,7 +103,7 @@ export default function ContactForm() {
                 : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
             } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
           >
-            Your name
+            {name[lang]}
           </label>
           <span
             className={`${
@@ -106,7 +112,7 @@ export default function ContactForm() {
                 : 'hidden'
             }`}
           >
-            {ERROR_TEXTS.NAME[lang]}
+            {errors.NAME[lang]}
           </span>
         </div>
         <div className='relative w-full md:w-[47%]'>
@@ -134,7 +140,7 @@ export default function ContactForm() {
                 : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
             } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
           >
-            Email
+            {email[lang]}
           </label>
           <span
             className={`${
@@ -144,8 +150,8 @@ export default function ContactForm() {
             }`}
           >
             {formState.errors.email?.type === 'required'
-              ? ERROR_TEXTS.EMAIL[lang]
-              : ERROR_TEXTS.EMAIL_INVALID[lang]}
+              ? errors.EMAIL[lang]
+              : errors.EMAIL_INVALID[lang]}
           </span>
         </div>
       </div>
@@ -169,7 +175,7 @@ export default function ContactForm() {
               : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
           } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
         >
-          Message
+          {message[lang]}
         </label>
         <span
           className={`${
@@ -178,12 +184,13 @@ export default function ContactForm() {
               : 'hidden'
           }`}
         >
-          {ERROR_TEXTS.MESSAGE[lang]}
+          {errors.MESSAGE[lang]}
         </span>
       </div>
       <ContactFormButton
         disabled={!formState.isValid}
         state={calculateState()}
+        text={submit[lang]}
       />
     </form>
   );
