@@ -1,17 +1,18 @@
 'use client';
-
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, LayoutGroup } from 'framer-motion';
 import NaraLogo from '@/components/NaraLogo';
 import LangButton from '@/components/LangButton';
 import SwitchButton from '@/components/SwitchButton';
 import HamburgerButton from '@/components/HamburgerButton';
 import { useLang } from '@/contexts/LangContext';
+import { useCurrentSection } from '@/contexts/CurrentSectionContext';
 import content from '@/content.json';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const { lang } = useLang();
+  const { currentSection } = useCurrentSection();
   const menuRef = useRef<HTMLMenuElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -48,15 +49,24 @@ export default function Header() {
             : 'hidden'
         }`}
       >
-        {content.header.links.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className='text-xl font-bold text-primary-light hover:text-gray-900 dark:text-primary-dark dark:hover:text-gray-100 lg:text-3xl lg:text-gray-700 lg:dark:text-gray-300'
-          >
-            {link.name[lang]}
-          </a>
-        ))}
+        <LayoutGroup>
+          {content.header.links.map((link) => (
+            <span className='relative' key={link.href}>
+              <a
+                href={link.href}
+                className='text-xl font-bold text-primary-light hover:text-gray-900 dark:text-primary-dark dark:hover:text-gray-100 lg:text-3xl lg:text-gray-700 lg:dark:text-gray-300'
+              >
+                {link.name[lang]}
+              </a>
+              {currentSection === link.href.replace('#', '') ? (
+                <motion.div
+                  className='absolute bottom-0 right-0 h-1 w-full rounded-lg bg-primary-light dark:bg-primary-dark lg:bg-gray-700 lg:dark:bg-gray-300'
+                  layoutId='underline'
+                ></motion.div>
+              ) : null}
+            </span>
+          ))}
+        </LayoutGroup>
         <span className='flex gap-3 lg:hidden'>
           <LangButton colorMode='regular' />
           <SwitchButton colorMode='regular' />

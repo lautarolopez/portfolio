@@ -175,6 +175,24 @@
       "en": "Contact",
       "es": "Contacto"
     },
+    "subtitle": {
+      "button": {
+        "en": "You can copy my email to your clipboard",
+        "es": "Podés copiar mi email al portapapeles"
+      },
+      "or": {
+        "en": " or ",
+        "es": " o "
+      },
+      "anchor": {
+        "en": "send me an email from your favourite email client.",
+        "es": "mandarme un email desde tu cliente de email favorito."
+      },
+      "contactForm": {
+        "en": " Or you can put to good use this amazing form and I'll reach to you as soon as I can.",
+        "es": " O podés usar este increíble formulario y me voy a contactar con vos apenas pueda."
+      }
+    },
     "form": {
       "name": {
         "en": "Name",
@@ -205,7 +223,7 @@
           "en": "Invalid email!",
           "es": "Email inválido!"
         },
-       "MESSAGE": {
+        "MESSAGE": {
           "en": "Don't be shy, say hello!",
           "es": "Contame algo!"
         }

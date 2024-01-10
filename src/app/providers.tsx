@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from 'next-themes';
 import { LangProvider } from '@/contexts/LangContext';
+import { CurrentSectionProvider } from '@/contexts/CurrentSectionContext';
 
 type Props = {
   children: React.ReactNode;
@@ -17,7 +18,9 @@ export default function Providers({ children }: Props) {
 
   return (
     <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-      <LangProvider>{children}</LangProvider>
+      <LangProvider>
+        <CurrentSectionProvider>{children}</CurrentSectionProvider>
+      </LangProvider>
     </ThemeProvider>
   );
 }

@@ -1,15 +1,46 @@
 'use client';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import ResumeButton from '@/components/ResumeButton';
 import LandingImage from '@/components/LandingImage';
 import { useLang } from '@/contexts/LangContext';
+import { useCurrentSection } from '@/contexts/CurrentSectionContext';
 import content from '@/content.json';
 
 export default function LandingSection() {
+  const targetRef = useRef<HTMLDivElement>(null);
   const { lang } = useLang();
+  const { setCurrentSection } = useCurrentSection();
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    if (entries[0].isIntersecting) {
+      setCurrentSection('home');
+    }
+  };
+
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section
+      ref={targetRef}
       id='home'
       className='mx-auto flex min-h-screen w-full max-w-6xl snap-center flex-col-reverse items-center justify-center lg:flex-row lg:justify-around lg:pt-0'
     >
