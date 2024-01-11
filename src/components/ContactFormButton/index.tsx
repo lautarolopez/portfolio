@@ -140,7 +140,7 @@ export default function ContactFormButton({
       ref={scope}
       onClick={handleClick}
       initial={buttonStates['initial']}
-      className={`relative flex h-20 items-center justify-center gap-3 bg-gradient-to-br from-primary-dark to-secondary-dark px-4 py-3 text-lg font-bold text-primary-light duration-500 dark:bg-gradient-to-br dark:from-primary-light dark:to-secondary-light dark:text-primary-dark md:px-6 md:py-4 md:text-xl`}
+      className={`relative flex h-14 items-center justify-center gap-3 bg-gradient-to-br from-primary-dark to-secondary-dark px-4 py-3 text-lg font-bold text-primary-light duration-500 dark:bg-gradient-to-br dark:from-primary-light dark:to-secondary-light dark:text-primary-dark md:px-6 md:py-4 md:text-xl`}
     >
       <motion.span initial={spanStates['initial']} className='absolute'>
         {text}

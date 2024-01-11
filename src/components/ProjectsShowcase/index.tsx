@@ -24,12 +24,12 @@ export default function ProjectsShowcase() {
           </a>
         </span>
       </span>
-      <span className='min-h-[400px] w-full md:w-4/5 md:max-w-2xl'>
+      <span className='w-full md:w-4/5 md:max-w-2xl'>
         <span className='text-xl font-bold text-primary-dark dark:text-primary-light'>
           {projects.cat.title[lang]} | {projects.cat.year}
         </span>
 
-        <p className='pb-4 text-lg text-slate-700 dark:text-slate-300'>
+        <p className='py-4 text-lg text-slate-700 dark:text-slate-300'>
           {projects.cat.description[lang]}
         </p>
         <span className='flex flex-wrap gap-3'>

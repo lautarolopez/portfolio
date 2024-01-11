@@ -17,8 +17,6 @@ export default function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleClick = () => {
-    console.log(open);
-
     setOpen(!open);
   };
 

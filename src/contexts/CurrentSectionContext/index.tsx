@@ -29,14 +29,9 @@ export const CurrentSectionProvider = ({
   const [currentSection, setCurrentSection] =
     useState<CurrentSectionOptionsType>('home');
 
-  const handleSetCurrentSection = (section: CurrentSectionOptionsType) => {
-    setCurrentSection(section);
-    console.log(section);
-  };
-
   return (
     <CurrentSectionContext.Provider
-      value={{ currentSection, setCurrentSection: handleSetCurrentSection }}
+      value={{ currentSection, setCurrentSection }}
     >
       {children}
     </CurrentSectionContext.Provider>

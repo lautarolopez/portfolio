@@ -10,7 +10,7 @@ export default function ContactSubtitle() {
 
   return (
     <span>
-      <p className='pt-4 text-center text-lg'>
+      <p className='pt-4 text-center text-lg md:max-w-[1000px]'>
         <button
           className='font-bold underline'
           onClick={async () => {

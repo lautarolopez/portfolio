@@ -71,10 +71,7 @@ export default function ExperiencesList() {
             {selectedExperienceObject.endDate[lang]}
           </span>
         </span>
-        <p
-          className='pb-4 text-lg text-slate-700 dark:text-slate-300
-             '
-        >
+        <p className='py-4 text-lg text-slate-700 dark:text-slate-300'>
           {selectedExperienceObject.description[lang]}
         </p>
         <span className='flex flex-wrap gap-3'>
