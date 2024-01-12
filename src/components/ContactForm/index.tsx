@@ -38,7 +38,7 @@ export default function ContactForm() {
   const { register, handleSubmit, formState, reset } = useForm<Inputs>();
   const {
     contact: {
-      form: { name, email, message, submit, errors },
+      form: { name, email, message, submit, footer, errors },
     },
   } = content;
 
@@ -192,6 +192,7 @@ export default function ContactForm() {
         state={calculateState()}
         text={submit[lang]}
       />
+      <p className='text-xl text-gray-500'>{footer[lang]}</p>
     </form>
   );
 }

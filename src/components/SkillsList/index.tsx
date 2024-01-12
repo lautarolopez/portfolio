@@ -72,11 +72,11 @@ export default function SkillsList() {
       {SKILLS(iconSize).map((skill, index) => (
         <motion.li
           key={skill.name}
-          className='flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-lg bg-primary-dark dark:bg-primary-light lg:h-28 lg:w-28 xl:h-36 xl:w-36'
+          className='flex h-20 w-20 flex-col items-center justify-center gap-1 rounded-lg bg-primary-dark dark:bg-primary-light md:h-28 md:w-28 xl:h-36 xl:w-36'
           variants={item(index, width)}
         >
           {skill.icon}
-          <p className='text-center text-lg font-bold text-primary-light dark:text-primary-dark'>
+          <p className='text-center text-xs font-bold text-primary-light dark:text-primary-dark md:text-lg'>
             {skill.name}
           </p>
         </motion.li>

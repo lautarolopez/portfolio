@@ -4,6 +4,7 @@ import { useCurrentSection } from '@/contexts/CurrentSectionContext';
 import DynamicTitle from '@/components/DynamicTitle';
 import ContactSubtitle from '@/components/ContactSubtitle';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 export default function ContactSection() {
   const targetRef = useRef<HTMLDivElement>(null);

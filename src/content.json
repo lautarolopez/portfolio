@@ -210,6 +210,10 @@
         "en": "Send",
         "es": "Enviar"
       },
+      "footer": {
+        "en": "Powered by lots of mate 🧉.",
+        "es": "Impulsado por mucho mate 🧉."
+      },
       "errors": {
         "NAME": {
           "en": "I need your name!",

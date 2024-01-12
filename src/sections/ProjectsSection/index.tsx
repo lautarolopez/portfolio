@@ -38,7 +38,7 @@ export default function ProjectsSection() {
     <section
       ref={targetRef}
       id='projects'
-      className='flex min-h-screen w-full snap-start flex-col items-center justify-center md:pt-32 lg:pt-0 xl:scroll-m-28'
+      className='flex min-h-screen w-full snap-start flex-col items-center justify-center md:pt-32 lg:pt-0'
     >
       <DynamicTitle section='projects' />
       <ProjectsShowcase />
