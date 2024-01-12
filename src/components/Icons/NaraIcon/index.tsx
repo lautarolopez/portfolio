@@ -5,7 +5,7 @@ type Props = {
   colorMode: ColorMode;
 };
 
-export default function LightBulbSolidIcon({ height = 40, colorMode }: Props) {
+export default function NaraIcon({ height = 40, colorMode }: Props) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
