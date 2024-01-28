@@ -70,6 +70,27 @@
     },
     "experiences": [
       {
+        "company": "Kubikware",
+        "image": "/images/kubikware.webp",
+        "position": {
+          "en": "React and Node Developer",
+          "es": "Desarrollador React y Node"
+        },
+        "startDate": {
+          "en": "January 2024",
+          "es": "Enero 2024"
+        },
+        "endDate": {
+          "en": "Present",
+          "es": "Presente"
+        },
+        "description": {
+          "en": "Joined Kubikware to continue growing as a fullstack developer, working on a variety of projects for different clients.",
+          "es": "Me uní a Kubikware para seguir creciendo como desarrollador fullstack, trabajando en una variedad de proyectos para diferentes clientes."
+        },
+        "technologies": ["React", "Node", "Figma", "Redux", "Typescript"]
+      },
+      {
         "company": "Symfa",
         "image": "/images/symfa.webp",
         "position": {
