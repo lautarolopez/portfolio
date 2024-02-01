@@ -21,16 +21,16 @@ const buttonStates = {
     borderRadius: '0.5rem',
   },
   loading: {
-    width: '5rem',
-    borderRadius: '50%',
+    width: '3.5rem',
+    borderRadius: '100vmax',
   },
   success: {
-    width: '5rem',
-    borderRadius: '50%',
+    width: '3.5rem',
+    borderRadius: '100vmax',
   },
   error: {
-    width: '5rem',
-    borderRadius: '50%',
+    width: '3.5rem',
+    borderRadius: '100vmax',
   },
 };
 
