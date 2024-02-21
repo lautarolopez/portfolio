@@ -15,6 +15,22 @@ const config: Config = {
         'secondary-dark': '#25234a',
         'secondary-light': '#FFEFCB',
       },
+      dropShadow: {
+        "border-dark": [
+          "4px 4px 0 #F6E3BA",
+          "-4px -4px 0 #F6E3BA",
+          "4px -4px 0 #F6E3BA",
+          "-4px 4px 0 #F6E3BA",
+          "0 25px 25px rgb(0 0 0 / 0.15)"
+        ],
+        "border-light": [
+          "4px 4px 0 #00003f",
+          "-4px -4px 0 #00003f",
+          "4px -4px 0 #00003f",
+          "-4px 4px 0 #00003f",
+          "0 25px 25px rgb(0 0 0 / 0.15)"
+        ],
+      }
     },
   },
   plugins: [],
