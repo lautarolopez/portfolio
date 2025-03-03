@@ -85,8 +85,8 @@
           "es": "Presente"
         },
         "description": {
-          "en": "Joined Kubikware to continue growing as a fullstack developer, working on a variety of projects for different clients.",
-          "es": "Me uní a Kubikware para seguir creciendo como desarrollador fullstack, trabajando en una variedad de proyectos para diferentes clientes."
+          "en": "Working at the re-design and re-launch of a platform that uses AI to generate an optimal and flexible resume to apply to different opportunities within the product.",
+          "es": "Trabajando como parte del rediseño y relanzamiento de una plataforma que utiliza IA para generar un currículum óptimo y flexible para aplicar a diferentes oportunidades dentro del producto."
         },
         "technologies": ["React", "Node", "Figma", "Redux", "Typescript"]
       },

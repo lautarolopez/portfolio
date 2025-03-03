@@ -60,7 +60,6 @@ export default function ProjectsShowcase() {
     if (dragStartRef.current !== null) handleMouseUp();
   };
 
-  // Touch handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     stopAutoSlide();
     dragStartRef.current = e.touches[0].clientX;
