@@ -260,23 +260,44 @@
       "en": "Projects",
       "es": "Proyectos"
     },
-    "cat": {
-      "title": {
-        "en": "CAT Filmmaker",
-        "es": "CAT Filmmaker"
+    "data" : [
+      {
+        "title": {
+          "en": "CAT Filmmaker",
+          "es": "CAT Filmmaker"
+        },
+        "year": 2021,
+        "technologies": ["React", "Next.js", "Sanity", "Node", "Figma"],
+        "image": "/images/catfilmmaker.webp",
+        "link": "https://catfilmmaker.com",
+        "hoverText": {
+          "en": "View",
+          "es": "Ver"
+        },
+        "description": {
+          "en": "Portfolio for a wedding photographer and filmmaker, with a respective dashboard to handle content. I transformed client needs into a beautiful design and implemented it into code with its functionality.",
+          "es": "Portfolio para un fotógrafo y cineasta de bodas, con su respectivo panel para manejar el contenido. Transformé las necesidades del cliente en un hermoso diseño y lo implementé en código con su funcionalidad."
+        }
       },
-      "year": 2021,
-      "technologies": ["React", "Next.js", "Sanity", "Node", "Figma"],
-      "image": "/images/catfilmmaker.webp",
-      "link": "https://catfilmmaker.com",
-      "hoverText": {
-        "en": "View",
-        "es": "Ver"
-      },
-      "description": {
-        "en": "Portfolio for a wedding photographer and filmmaker, with a respective dashboard to handle content. I transformed client needs into a beautiful design and implemented it into code with its functionality.",
-        "es": "Portfolio para un fotógrafo y cineasta de bodas, con su respectivo panel para manejar el contenido. Transformé las necesidades del cliente en un hermoso diseño y lo implementé en código con su funcionalidad."
+      {
+        "title": {
+          "en": "Rave Culture",
+          "es": "Cultura Rave"
+        },
+        "year": 2024,
+        "technologies": ["React", "TanStack", "Typescript", "Tailwind"],
+        "image": "/images/culturarave.webp",
+        "link": "https://culturarave.com",
+        "hoverText": {
+          "en": "View",
+          "es": "Ver"
+        },
+        "description": {
+          "en": "Community website to find electronic music, managed by a DJ. It allows to listen to content, get tickets for events and connect to fake-live pre-programmed podcasts.",
+          "es": "Web para una comunidad, destinado a encontrar música electrónica, gestionado por un DJ. Permite escuchar contenido, obtener entradas para eventos y conectarse a podcasts que simulan estar en vivo, pero son pre-programados."
+        }
       }
-    }
+    ]
+    
   }
 }
