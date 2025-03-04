@@ -88,7 +88,13 @@
           "en": "Working at the re-design and re-launch of a platform that uses AI to generate an optimal and flexible resume to apply to different opportunities within the product.",
           "es": "Trabajando como parte del rediseño y relanzamiento de una plataforma que utiliza IA para generar un currículum óptimo y flexible para aplicar a diferentes oportunidades dentro del producto."
         },
-        "technologies": ["React", "Node", "Figma", "Redux", "Typescript"]
+        "technologies": [
+          "React",
+          "Node",
+          "Figma",
+          "Redux",
+          "Typescript"
+        ]
       },
       {
         "company": "Symfa",
@@ -166,7 +172,13 @@
           "en": "A prospect enrollment application for a major health insurance company in Argentina, with it respective dashboard to help employees handle applications.",
           "es": "Una aplicación de inscripción de prospectos para una importante compañía de seguros de salud en Argentina, con su respectivo panel para ayudar a los empleados a gestionar las solicitudes."
         },
-        "technologies": ["React", "Node", "Typescript", "GCP", "PostgreSQL"]
+        "technologies": [
+          "React",
+          "Node",
+          "Typescript",
+          "GCP",
+          "PostgreSQL"
+        ]
       },
       {
         "company": "BPMX",
@@ -187,7 +199,14 @@
           "en": "Worked on a private java framework and plugin. Also participated in the development of the company website.",
           "es": "Trabajé en un framework y plugin privado de java. También participé en el desarrollo del sitio web de la empresa."
         },
-        "technologies": ["Java", "Gradle", "Javascript", "GWT", "AWS", "React"]
+        "technologies": [
+          "Java",
+          "Gradle",
+          "Javascript",
+          "GWT",
+          "AWS",
+          "React"
+        ]
       }
     ]
   },
@@ -260,32 +279,19 @@
       "en": "Projects",
       "es": "Proyectos"
     },
-    "data" : [
-      {
-        "title": {
-          "en": "CAT Filmmaker",
-          "es": "CAT Filmmaker"
-        },
-        "year": 2021,
-        "technologies": ["React", "Next.js", "Sanity", "Node", "Figma"],
-        "image": "/images/catfilmmaker.webp",
-        "link": "https://catfilmmaker.com",
-        "hoverText": {
-          "en": "View",
-          "es": "Ver"
-        },
-        "description": {
-          "en": "Portfolio for a wedding photographer and filmmaker, with a respective dashboard to handle content. I transformed client needs into a beautiful design and implemented it into code with its functionality.",
-          "es": "Portfolio para un fotógrafo y cineasta de bodas, con su respectivo panel para manejar el contenido. Transformé las necesidades del cliente en un hermoso diseño y lo implementé en código con su funcionalidad."
-        }
-      },
+    "data": [
       {
         "title": {
           "en": "Rave Culture",
           "es": "Cultura Rave"
         },
         "year": 2024,
-        "technologies": ["React", "TanStack", "Typescript", "Tailwind"],
+        "technologies": [
+          "React",
+          "TanStack",
+          "Typescript",
+          "Tailwind"
+        ],
         "image": "/images/culturarave.webp",
         "link": "https://culturarave.com",
         "hoverText": {
@@ -296,8 +302,31 @@
           "en": "Community website to find electronic music, managed by a DJ. It allows to listen to content, get tickets for events and connect to fake-live pre-programmed podcasts.",
           "es": "Web para una comunidad, destinado a encontrar música electrónica, gestionado por un DJ. Permite escuchar contenido, obtener entradas para eventos y conectarse a podcasts que simulan estar en vivo, pero son pre-programados."
         }
+      },
+      {
+        "title": {
+          "en": "CAT Filmmaker",
+          "es": "CAT Filmmaker"
+        },
+        "year": 2021,
+        "technologies": [
+          "React",
+          "Next.js",
+          "Sanity",
+          "Node",
+          "Figma"
+        ],
+        "image": "/images/catfilmmaker.webp",
+        "link": "https://catfilmmaker.com",
+        "hoverText": {
+          "en": "View",
+          "es": "Ver"
+        },
+        "description": {
+          "en": "Portfolio for a wedding photographer and filmmaker, with a respective dashboard to handle content. I transformed client needs into a beautiful design and implemented it into code with its functionality.",
+          "es": "Portfolio para un fotógrafo y cineasta de bodas, con su respectivo panel para manejar el contenido. Transformé las necesidades del cliente en un hermoso diseño y lo implementé en código con su funcionalidad."
+        }
       }
     ]
-    
   }
 }

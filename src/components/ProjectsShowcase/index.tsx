@@ -13,23 +13,69 @@ export default function ProjectsShowcase() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
   const dragStartRef = useRef<number | null>(null);
-  const slideIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const slideIntervalRef = useRef<number | null>(null); // In browser, setInterval returns a number
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isInViewport, setIsInViewport] = useState(false);
 
   useEffect(() => {
-    startAutoSlide();
-    return () => stopAutoSlide();
-  }, [currentIndex]);
+    let observer: IntersectionObserver | null = null;
+    try {
+      if (
+        typeof window !== 'undefined' &&
+        'IntersectionObserver' in window &&
+        carouselRef.current
+      ) {
+        observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              setIsInViewport(entry.isIntersecting);
+            });
+          },
+          { threshold: 0.5 }
+        );
+        observer.observe(carouselRef.current);
+      } else {
+        setIsInViewport(true);
+      }
+    } catch (err) {
+      console.error('Error initializing IntersectionObserver:', err);
+      setIsInViewport(true);
+    }
+    return () => {
+      try {
+        if (observer) {
+          observer.disconnect();
+        }
+      } catch (err) {
+        console.error('Error disconnecting IntersectionObserver:', err);
+      }
+    };
+  }, []);
+
+  const stopAutoSlide = () => {
+    if (slideIntervalRef.current !== null) {
+      clearInterval(slideIntervalRef.current);
+      slideIntervalRef.current = null;
+    }
+  };
 
   const startAutoSlide = () => {
+    if (!isInViewport) return;
     stopAutoSlide();
-    slideIntervalRef.current = setInterval(() => {
+    slideIntervalRef.current = window.setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % data.length);
     }, 8000);
   };
 
-  const stopAutoSlide = () => {
-    if (slideIntervalRef.current) clearInterval(slideIntervalRef.current);
-  };
+  useEffect(() => {
+    if (isInViewport) {
+      setCurrentIndex(0);
+      startAutoSlide();
+    } else {
+      stopAutoSlide();
+    }
+    return () => stopAutoSlide();
+  }, [isInViewport]);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     stopAutoSlide();
@@ -53,7 +99,7 @@ export default function ProjectsShowcase() {
     }
     setDragOffset(0);
     dragStartRef.current = null;
-    startAutoSlide();
+    if (isInViewport) startAutoSlide();
   };
 
   const handleMouseLeave = () => {
@@ -82,11 +128,11 @@ export default function ProjectsShowcase() {
     }
     setDragOffset(0);
     dragStartRef.current = null;
-    startAutoSlide();
+    if (isInViewport) startAutoSlide();
   };
 
   return (
-    <div className='relative overflow-hidden'>
+    <div ref={carouselRef} className='relative overflow-hidden'>
       <div
         className={`flex ${
           dragOffset !== 0
@@ -112,7 +158,7 @@ export default function ProjectsShowcase() {
               <span className='py-4 text-center text-xl font-bold text-primary-dark dark:text-primary-light'>
                 {project.title[lang]} | {project.year}
               </span>
-              <span className='group relative flex flex-col items-center justify-center gap-3 pb-7 md:pb-0'>
+              <span className='group relative flex h-[338px] w-[600px] flex-col items-center justify-center gap-3 pb-7 md:pb-0'>
                 <Image
                   src={project.image}
                   alt='projects'
@@ -120,7 +166,7 @@ export default function ProjectsShowcase() {
                   height={338}
                   className='rounded-xl transition-all duration-500 ease-in-out group-hover:grayscale'
                 />
-                <span className='absolute left-0 top-0 z-50 flex aspect-video h-full max-h-[338px] w-full max-w-[600px] items-center justify-center rounded-xl bg-black/50 text-3xl text-white opacity-0 backdrop-blur-sm transition-all duration-500 ease-in-out group-hover:opacity-100'>
+                <span className='absolute left-0 top-0 z-50 flex aspect-video h-[338px] w-[600px] items-center justify-center rounded-xl bg-black/50 text-3xl text-white opacity-0 backdrop-blur-sm transition-all duration-500 ease-in-out group-hover:opacity-100'>
                   <a href={project.link} target='_blank'>
                     {project.hoverText[lang]}
                   </a>
