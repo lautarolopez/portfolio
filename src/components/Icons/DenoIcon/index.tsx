@@ -18,11 +18,7 @@ export default function DenoIcon({
       width={width}
       viewBox='0 0 1024.000000 1024.000000'
       preserveAspectRatio='xMidYMid meet'
-      className={`${
-        colorMode === 'regular'
-          ? 'fill-primary-light dark:fill-primary-dark'
-          : 'fill-primary-dark dark:fill-primary-light'
-      }`}
+      className='fill-gray-900'
     >
       <g
         transform='translate(0.000000,1024.000000) scale(0.100000,-0.100000)'

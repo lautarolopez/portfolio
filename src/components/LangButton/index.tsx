@@ -42,17 +42,11 @@ export default function SwitchButton({ colorMode }: Props) {
       title='Switch language'
       onClick={handleClick}
     >
-      <span
-        className={`text-xl underline ${
-          colorMode === 'regular'
-            ? 'text-primary-light dark:text-primary-dark'
-            : 'text-primary-dark dark:text-primary-light'
-        }`}
-      >
+      <span className='text-xl text-gray-900 underline'>
         {lang}
       </span>
       <span ref={scope}>
-        <EarthAmericasIcon height={40} colorMode={colorMode} />
+        <EarthAmericasIcon height={24} colorMode='regular' />
       </span>
     </button>
   );

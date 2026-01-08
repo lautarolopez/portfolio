@@ -131,8 +131,62 @@ export default function ProjectsShowcase() {
     if (isInViewport) startAutoSlide();
   };
 
+  const goToPrevious = () => {
+    stopAutoSlide();
+    setCurrentIndex((prev) => (prev - 1 + data.length) % data.length);
+    if (isInViewport) startAutoSlide();
+  };
+
+  const goToNext = () => {
+    stopAutoSlide();
+    setCurrentIndex((prev) => (prev + 1) % data.length);
+    if (isInViewport) startAutoSlide();
+  };
+
   return (
     <div ref={carouselRef} className='relative overflow-hidden'>
+      {/* Left Arrow */}
+      <button
+        onClick={goToPrevious}
+        className='absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-indigo-400/80 p-2 transition-all hover:bg-indigo-400 md:left-4'
+        aria-label='Previous project'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          strokeWidth='3'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          className='text-gray-900'
+        >
+          <path d='M15 18l-6-6 6-6' />
+        </svg>
+      </button>
+      {/* Right Arrow */}
+      <button
+        onClick={goToNext}
+        className='absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full bg-indigo-400/80 p-2 transition-all hover:bg-indigo-400 md:right-4'
+        aria-label='Next project'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='24'
+          height='24'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke='currentColor'
+          strokeWidth='3'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          className='text-gray-900'
+        >
+          <path d='M9 18l6-6-6-6' />
+        </svg>
+      </button>
       <div
         className={`flex ${
           dragOffset !== 0
@@ -154,33 +208,35 @@ export default function ProjectsShowcase() {
       >
         {data.map((project, index) => (
           <div key={index} className='w-full flex-shrink-0'>
-            <article className='mb-4 flex w-full flex-col items-center justify-center px-6 py-4'>
-              <span className='py-4 text-center text-xl font-bold text-primary-dark dark:text-primary-light'>
+            <article className='mb-4 flex w-full flex-col items-center justify-center px-4 py-4 md:px-6'>
+              <span className='py-4 text-center text-xl font-bold text-white'>
                 {project.title[lang]} | {project.year}
               </span>
-              <span className='group relative flex h-[338px] w-[600px] flex-col items-center justify-center gap-3 pb-7 md:pb-0'>
-                <Image
-                  src={project.image}
-                  alt='projects'
-                  width={600}
-                  height={338}
-                  className='rounded-xl transition-all duration-500 ease-in-out group-hover:grayscale'
-                />
-                <span className='absolute left-0 top-0 z-50 flex aspect-video h-[338px] w-[600px] items-center justify-center rounded-xl bg-black/50 text-3xl text-white opacity-0 backdrop-blur-sm transition-all duration-500 ease-in-out group-hover:opacity-100'>
-                  <a href={project.link} target='_blank'>
-                    {project.hoverText[lang]}
-                  </a>
-                </span>
+              <span className='group relative flex w-full max-w-[600px] flex-col items-center justify-center gap-3 pb-7 md:pb-0'>
+                <div className='relative aspect-video w-full'>
+                  <Image
+                    src={project.image}
+                    alt='projects'
+                    fill
+                    sizes='(max-width: 768px) 100vw, 600px'
+                    className='rounded-xl object-cover transition-all duration-500 ease-in-out group-hover:grayscale'
+                  />
+                  <span className='absolute inset-0 z-50 flex items-center justify-center rounded-xl bg-black/50 text-xl text-white opacity-0 backdrop-blur-sm transition-all duration-500 ease-in-out group-hover:opacity-100 md:text-3xl'>
+                    <a href={project.link} target='_blank'>
+                      {project.hoverText[lang]}
+                    </a>
+                  </span>
+                </div>
               </span>
               <span className='flex w-full flex-col items-center justify-center text-center md:w-4/5 md:max-w-2xl'>
-                <p className='py-4 text-lg text-slate-700 dark:text-slate-300'>
+                <p className='py-4 font-mono text-lg text-slate-300'>
                   {project.description[lang]}
                 </p>
                 <span className='flex flex-wrap justify-center gap-3'>
                   {project.technologies.map((technology) => (
                     <span
                       key={`${technology}_${index}`}
-                      className='rounded-full border-2 border-solid border-primary-dark px-2 py-1 font-bold text-primary-dark dark:border-primary-light dark:text-primary-light'
+                      className='rounded-full border-2 border-solid border-indigo-400 px-2 py-1 font-bold text-indigo-400'
                     >
                       {technology}
                     </span>
@@ -196,9 +252,7 @@ export default function ProjectsShowcase() {
           <span
             key={i}
             className={`h-3 w-3 cursor-pointer rounded-full ${
-              currentIndex === i
-                ? 'bg-primary-dark dark:bg-secondary-light'
-                : 'bg-primary-dark/30 dark:bg-secondary-light/30'
+              currentIndex === i ? 'bg-gray-800' : 'bg-gray-800/30'
             }`}
             onClick={() => setCurrentIndex(i)}
           />

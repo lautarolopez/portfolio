@@ -30,7 +30,7 @@ export default forwardRef<HTMLButtonElement, Props>(function HamburguerButton(
   useEffect(() => setMounted(true), []);
 
   if (!mounted)
-    return <Skeleton height={height} width={height} className='lg:hidden' />;
+    return <Skeleton height={height} width={height} />;
 
   const handleClick = () => {
     controls.start(isOpen ? PATH_VARIANTS.CLOSED : PATH_VARIANTS.OPEN);
@@ -44,7 +44,6 @@ export default forwardRef<HTMLButtonElement, Props>(function HamburguerButton(
       type='button'
       onClick={handleClick}
       title='Open hamburger menu'
-      className='lg:hidden'
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'

@@ -40,7 +40,7 @@ export default function ContactSection() {
     <section
       ref={targetRef}
       id='contact'
-      className='flex min-h-screen w-full snap-start flex-col items-center justify-center pt-32 lg:pt-0 xl:scroll-m-28'
+      className='flex min-h-screen w-full flex-col items-center justify-center py-16 lg:py-24'
     >
       <DynamicTitle section='contact' />
       <ContactSubtitle />

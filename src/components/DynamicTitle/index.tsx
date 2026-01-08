@@ -9,7 +9,7 @@ type Props = {
 export default function DynamicTitle({ section }: Props) {
   const { lang } = useLang();
   return (
-    <h2 className='text-center text-4xl font-bold lg:text-left'>
+    <h2 className='text-center text-4xl font-bold text-white lg:text-left'>
       {content[section].title[lang]}
     </h2>
   );

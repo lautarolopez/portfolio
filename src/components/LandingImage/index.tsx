@@ -1,12 +1,10 @@
 'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
 import { useWindowDimensions } from '@/hooks/useWindowDimension';
 import { COLORS } from '@/constants';
 
 export default function LandingImage() {
-  const { theme } = useTheme();
   const { width } = useWindowDimensions();
 
   return (
@@ -18,24 +16,16 @@ export default function LandingImage() {
     >
       <Image
         alt='Developer picture'
-        width={width && width < 600 ? 250 : 500}
-        height={width && width < 600 ? 250 : 500}
+        width={width && width < 600 ? 100 : 150}
+        height={width && width < 600 ? 100 : 150}
         fill={false}
         priority
-        src={theme === 'dark' ? '/images/blackt.webp' : '/images/whitet.webp'}
-        className={`h-auto w-[95vw] ${
-          width && width < 600 ? 'max-w-[250px]' : 'max-w-[500px]'
+        src='/images/profile.webp'
+        className={`h-auto w-auto rounded-xl ${
+          width && width < 600 ? 'max-w-[200px]' : 'max-w-[350px]'
         }`}
         style={{
-          filter: `drop-shadow(4px 4px 0 ${
-            theme === 'dark' ? COLORS['primary-light'] : COLORS['primary-dark']
-          }) drop-shadow(-4px 4px 0 ${
-            theme === 'dark' ? COLORS['primary-light'] : COLORS['primary-dark']
-          }) drop-shadow(4px -4px 0 ${
-            theme === 'dark' ? COLORS['primary-light'] : COLORS['primary-dark']
-          }) drop-shadow(-4px -4px 0 ${
-            theme === 'dark' ? COLORS['primary-light'] : COLORS['primary-dark']
-          }) drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))`,
+          filter: `drop-shadow(4px 4px 0 ${COLORS['primary-light']}) drop-shadow(-4px 4px 0 ${COLORS['primary-light']}) drop-shadow(4px -4px 0 ${COLORS['primary-light']}) drop-shadow(-4px -4px 0 ${COLORS['primary-light']}) drop-shadow(0 25px 25px rgb(0 0 0 / 0.25))`,
         }}
       />
     </motion.div>

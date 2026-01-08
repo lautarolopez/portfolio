@@ -10,7 +10,7 @@ export default function ContactSubtitle() {
 
   return (
     <span>
-      <p className='pt-4 text-center text-lg md:max-w-[1000px]'>
+      <p className='font-mono pt-4 text-center text-lg text-white md:max-w-[1000px]'>
         <button
           className='font-bold underline'
           onClick={async () => {
@@ -39,7 +39,7 @@ export default function ContactSubtitle() {
       </p>
       <div
         ref={scope}
-        className='ml-35 text-shadow-sm absolute bottom-10 right-10 z-50 float-left clear-left rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-primary-dark p-8 px-4 text-3xl leading-4 opacity-0 dark:bg-primary-light sm:left-10 sm:right-auto'
+        className='ml-35 text-shadow-sm absolute bottom-10 right-10 z-50 float-left clear-left rounded-br-2xl rounded-tl-2xl rounded-tr-2xl bg-indigo-400 p-8 px-4 text-3xl leading-4 opacity-0 sm:left-10 sm:right-auto'
       >
         📋✅
       </div>

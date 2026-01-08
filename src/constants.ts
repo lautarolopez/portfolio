@@ -1,6 +1,6 @@
 export const COLORS = {
-  'primary-dark': '#00003f',
-  'primary-light': '#F6E3BA',
-  'secondary-dark': '#25234a',
-  'secondary-light': '#FFEFCB',
+  'primary-dark': '#4f46e5', // indigo-600
+  'primary-light': '#6366f1', // indigo-500
+  'secondary-dark': '#111827', // gray-900
+  'secondary-light': '#1f2937', // gray-800
 };

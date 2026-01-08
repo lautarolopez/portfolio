@@ -6,7 +6,7 @@ import ProjectsSection from '@/sections/ProjectsSection';
 
 export default function Home() {
   return (
-    <main className='no-scrollbar h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth px-2 pt-16 lg:p-24'>
+    <main className='w-full max-w-full overflow-x-hidden px-2 lg:px-24'>
       <LandingSection />
       <SkillsSection />
       <ExperienceSection />

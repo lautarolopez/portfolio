@@ -88,8 +88,8 @@ export default function ContactForm() {
             className={`${
               formState.errors.name
                 ? 'border-rose-400'
-                : 'border-primary-dark dark:border-primary-light'
-            } peer block w-full appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5 pt-4  text-xl text-primary-dark  focus:border-primary-dark focus:outline-none focus:ring-0 dark:text-primary-light dark:focus:border-primary-light`}
+                : 'border-indigo-400'
+            } font-mono peer block w-full appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5 pt-4  text-xl text-white  focus:border-indigo-400 focus:outline-none focus:ring-0`}
             placeholder=''
             autoComplete='off'
             aria-invalid={formState.errors.name ? 'true' : 'false'}
@@ -100,8 +100,8 @@ export default function ContactForm() {
             className={`${
               formState.errors.name
                 ? 'text-rose-400'
-                : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
-            } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
+                : 'text-white peer-focus:text-white'
+            } font-mono absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-gray-900 px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2`}
           >
             {name[lang]}
           </label>
@@ -122,8 +122,8 @@ export default function ContactForm() {
             className={`${
               formState.errors.email
                 ? 'border-rose-400'
-                : 'border-primary-dark dark:border-primary-light'
-            } peer block w-full appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5 pt-4  text-xl text-primary-dark  focus:border-primary-dark focus:outline-none focus:ring-0 dark:text-primary-light dark:focus:border-primary-light`}
+                : 'border-indigo-400'
+            } font-mono peer block w-full appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5 pt-4  text-xl text-white  focus:border-indigo-400 focus:outline-none focus:ring-0`}
             placeholder=''
             autoComplete='off'
             aria-invalid={formState.errors.email ? 'true' : 'false'}
@@ -137,8 +137,8 @@ export default function ContactForm() {
             className={`${
               formState.errors.email
                 ? 'text-rose-400'
-                : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
-            } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
+                : 'text-white peer-focus:text-white'
+            } font-mono absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-gray-900 px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2`}
           >
             {email[lang]}
           </label>
@@ -161,8 +161,8 @@ export default function ContactForm() {
           className={`${
             formState.errors.message
               ? 'border-rose-400'
-              : 'border-primary-dark dark:border-primary-light'
-          } peer block h-40 w-full resize-y appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5  pt-4 text-xl  text-primary-dark focus:border-primary-dark focus:outline-none focus:ring-0 dark:text-primary-light dark:focus:border-primary-light`}
+              : 'border-indigo-400'
+          } font-mono peer block h-40 w-full resize-y appearance-none rounded-lg border-4 bg-transparent px-2.5 pb-2.5  pt-4 text-xl  text-white focus:border-indigo-400 focus:outline-none focus:ring-0`}
           placeholder=''
           aria-invalid={formState.errors.message ? 'true' : 'false'}
           {...register('message', { required: true })}
@@ -172,8 +172,8 @@ export default function ContactForm() {
           className={`${
             formState.errors.message
               ? 'text-rose-400'
-              : 'text-primary-dark peer-focus:text-primary-dark dark:text-primary-light peer-focus:dark:text-primary-light'
-          } absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-primary-light px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 dark:bg-primary-dark`}
+              : 'text-white peer-focus:text-white'
+          } font-mono absolute left-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform cursor-text bg-gray-900 px-2 text-lg font-bold duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2`}
         >
           {message[lang]}
         </label>

@@ -13,11 +13,7 @@ export default function NaraIcon({ height = 40, colorMode }: Props) {
       version='1.1'
       viewBox='0 0 100 100'
       preserveAspectRatio='none'
-      className={`${
-        colorMode === 'regular'
-          ? 'stroke-primary-light dark:stroke-primary-dark'
-          : 'stroke-primary-dark dark:stroke-primary-light'
-      }`}
+      className='stroke-indigo-400'
     >
       <g id='layer1' transform='translate(-312.7186,-770.93361)'>
         <path
