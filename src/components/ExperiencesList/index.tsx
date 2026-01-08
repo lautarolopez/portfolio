@@ -12,6 +12,8 @@ function LineConnector({ index }: { index: number }) {
   const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     const updateHeight = () => {
       if (lineRef.current) {
         if (window.matchMedia('(min-width: 768px)').matches) {

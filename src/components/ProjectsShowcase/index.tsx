@@ -60,7 +60,7 @@ export default function ProjectsShowcase() {
   };
 
   const startAutoSlide = () => {
-    if (!isInViewport) return;
+    if (typeof window === 'undefined' || !isInViewport) return;
     stopAutoSlide();
     slideIntervalRef.current = window.setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % data.length);
@@ -68,6 +68,8 @@ export default function ProjectsShowcase() {
   };
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (isInViewport) {
       setCurrentIndex(0);
       startAutoSlide();

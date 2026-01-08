@@ -1,8 +1,7 @@
 'use client';
 
-import { forwardRef, useEffect, useState } from 'react';
+import { forwardRef, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Skeleton from '@/components/Skeleton';
 
 type Props = {
   height?: number;
@@ -23,14 +22,8 @@ export default forwardRef<HTMLButtonElement, Props>(function HamburguerButton(
   { height = 40, className, onClick }: Props,
   ref
 ) {
-  const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const controls = useAnimation();
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted)
-    return <Skeleton height={height} width={height} />;
 
   const handleClick = () => {
     controls.start(isOpen ? PATH_VARIANTS.CLOSED : PATH_VARIANTS.OPEN);
