@@ -51,7 +51,7 @@ export default function ExperiencesList() {
           const isLast = index === experiences.length - 1;
           return (
             <div
-              key={experience.company}
+              key={experience.company.en}
               className='relative flex w-full flex-col gap-6 md:flex-row md:items-start md:gap-8'
             >
               {/* Logo container on timeline */}
@@ -60,7 +60,7 @@ export default function ExperiencesList() {
                   height={70}
                   width={70}
                   src={experience.image}
-                  alt={`${experience.company} logo`}
+                  alt={`${experience.company[lang]} logo`}
                   className='h-[70px] w-[70px] flex-shrink-0 rounded-xl border-2 border-solid border-indigo-400 bg-white'
                 />
               </div>
@@ -71,19 +71,24 @@ export default function ExperiencesList() {
               <div className='w-full overflow-hidden md:ml-24 md:w-[calc(100%-6rem)]'>
                 <div className='flex flex-col'>
                   <span className='text-xl font-bold text-white'>
-                    {experience.position[lang]} @ {experience.company}
+                    {experience.position[lang]} @ {experience.company[lang]}
                   </span>
                   <span className='font-mono text-lg font-semibold text-slate-300'>
                     {experience.startDate[lang]} - {experience.endDate[lang]}
                   </span>
                 </div>
-                <p className='py-4 font-mono text-lg text-slate-300'>
-                  {experience.description[lang]}
-                </p>
+                <ul className='flex flex-col gap-2 py-4 font-mono text-lg text-slate-300'>
+                  {experience.description[lang].map((bullet) => (
+                    <li key={bullet} className='flex gap-3'>
+                      <span className='mt-[0.6em] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-400' />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
                 <span className='flex flex-wrap gap-3'>
                   {experience.technologies.map((technology) => (
                     <span
-                      key={`${technology}_${experience.company}`}
+                      key={`${technology}_${experience.company.en}`}
                       className='rounded-full border-2 border-solid border-indigo-400 px-2 py-1 font-bold text-indigo-400'
                     >
                       {technology}

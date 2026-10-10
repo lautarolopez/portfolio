@@ -74,11 +74,14 @@
     },
     "experiences": [
       {
-        "company": "Kubikware",
+        "company": {
+          "en": "Kubikware",
+          "es": "Kubikware"
+        },
         "image": "/images/kubikware.webp",
         "position": {
-          "en": "React and Node Developer",
-          "es": "Desarrollador React y Node"
+          "en": "React/Node/Laravel Developer",
+          "es": "Desarrollador React, Node y Laravel"
         },
         "startDate": {
           "en": "January 2024",
@@ -89,8 +92,18 @@
           "es": "Presente"
         },
         "description": {
-          "en": "Working at the re-design and re-launch of a platform that uses AI to generate an optimal and flexible resume to apply to different opportunities within the product.",
-          "es": "Trabajando como parte del rediseño y relanzamiento de una plataforma que utiliza IA para generar un currículum óptimo y flexible para aplicar a diferentes oportunidades dentro del producto."
+          "en": [
+            "Design and deliver features end-to-end for HelloHive, contributing from product and UX decisions through technical architecture, backend, and frontend implementation.",
+            "Develop complex React and TypeScript interfaces and reusable components for an AI-enabled resume and career platform.",
+            "Collaborated on the architecture and implementation of AWS Bedrock resume parsing and improvement features, contributing to LLM workflow decisions and prompt refinement.",
+            "Build and integrate Laravel and Node.js services and AWS-backed document workflows; contribute to frontend architecture, accessibility, and testing."
+          ],
+          "es": [
+            "Diseño y entrego funcionalidades de punta a punta para HelloHive, participando desde las decisiones de producto y UX hasta la arquitectura técnica, el backend y la implementación del frontend.",
+            "Desarrollo interfaces complejas en React y TypeScript y componentes reutilizables para una plataforma de currículums y carrera profesional impulsada por IA.",
+            "Colaboré en la arquitectura e implementación de funcionalidades de análisis y mejora de currículums con AWS Bedrock, aportando a las decisiones del flujo de trabajo con LLMs y al refinamiento de prompts.",
+            "Construyo e integro servicios en Laravel y Node.js y flujos de documentos sobre AWS; contribuyo a la arquitectura del frontend, la accesibilidad y las pruebas."
+          ]
         },
         "technologies": [
           "React",
@@ -101,7 +114,10 @@
         ]
       },
       {
-        "company": "Symfa",
+        "company": {
+          "en": "Symfa",
+          "es": "Symfa"
+        },
         "image": "/images/symfa.webp",
         "position": {
           "en": "React/Node Developer",
@@ -116,8 +132,14 @@
           "es": "Octubre 2023"
         },
         "description": {
-          "en": "I joined Symfa to participate in a PWA project for Reynolds American. In a few months, I helped to improve the accessibility of the app, working with Handlebars, raw CSS, and TypeScript in the lambda tier of the application. After that, I moved to research improvements for the in-company applications while waiting for a new project.",
-          "es": "Me uní a Symfa para participar en un proyecto PWA para Reynolds American. En pocos meses, ayudé a mejorar la accesibilidad de la aplicación, trabajando con Handlebars, CSS en bruto y TypeScript en la capa lambda de la aplicación. Después de eso, me dediqué a investigar mejoras para las aplicaciones internas mientras esperaba un nuevo proyecto."
+          "en": [
+            "Contributed to migration of a Reynolds American PWA toward React; improved accessibility and maintained TypeScript/JavaScript functionality across frontend and AWS Lambda services.",
+            "Developed and maintained internal React applications and worked with PostgreSQL-backed services."
+          ],
+          "es": [
+            "Contribuí a la migración de una PWA de Reynolds American hacia React; mejoré la accesibilidad y mantuve la funcionalidad en TypeScript y JavaScript en el frontend y en los servicios de AWS Lambda.",
+            "Desarrollé y mantuve aplicaciones internas en React y trabajé con servicios respaldados por PostgreSQL."
+          ]
         },
         "technologies": [
           "React",
@@ -129,7 +151,10 @@
         ]
       },
       {
-        "company": "Tap Billetera/Payana",
+        "company": {
+          "en": "Tapi and Payana (former Tap Billetera)",
+          "es": "Tapi y Payana (ex Tap Billetera)"
+        },
         "image": "/images/tap-payana.webp",
         "position": {
           "en": "React/Node Developer",
@@ -144,8 +169,14 @@
           "es": "Octubre 2022"
         },
         "description": {
-          "en": "A digital wallet in React Native with a microservices-based architecture in the backend, used by thousands of users in Argentina. The application allowed users to receive and send money to and from the wallet, pay various services such as bills, subscriptions, recharges, etc., among other features. After the application was discontinued, the company moved to another application that helped small businesses handle payments to providers and employees.",
-          "es": "Una billetera digital en React Native con una arquitectura basada en microservicios en el backend, utilizada por miles de usuarios en Argentina. La aplicación permitía a los usuarios recibir y enviar dinero hacia y desde la billetera, pagar diversos servicios como facturas, suscripciones, recargas, etc., entre otras funciones. Después de que la aplicación fue descontinuada, la empresa se trasladó a otra aplicación que ayudaba a las pequeñas empresas a gestionar los pagos a proveedores y empleados."
+          "en": [
+            "Developed JavaScript microservices for a digital wallet, including transaction and user fraud-prevention rules.",
+            "Helped design Payana’s application architecture and implement features across its React frontend and backend services."
+          ],
+          "es": [
+            "Desarrollé microservicios en JavaScript para una billetera digital, incluyendo reglas de prevención de fraude sobre transacciones y usuarios.",
+            "Participé en el diseño de la arquitectura de la aplicación de Payana e implementé funcionalidades en su frontend en React y en sus servicios de backend."
+          ]
         },
         "technologies": [
           "React",
@@ -158,7 +189,10 @@
         ]
       },
       {
-        "company": "Softtek",
+        "company": {
+          "en": "Softtek",
+          "es": "Softtek"
+        },
         "image": "/images/softtek.webp",
         "position": {
           "en": "React/Node Developer",
@@ -173,8 +207,12 @@
           "es": "Diciembre 2021"
         },
         "description": {
-          "en": "A prospect enrollment application for a major health insurance company in Argentina, with it respective dashboard to help employees handle applications.",
-          "es": "Una aplicación de inscripción de prospectos para una importante compañía de seguros de salud en Argentina, con su respectivo panel para ayudar a los empleados a gestionar las solicitudes."
+          "en": [
+            "Built React/TypeScript enrollment and back-office features for OSDE; integrated with Express and NestJS services."
+          ],
+          "es": [
+            "Construí funcionalidades de inscripción y back-office en React y TypeScript para OSDE, integradas con servicios en Express y NestJS."
+          ]
         },
         "technologies": [
           "React",
@@ -185,7 +223,10 @@
         ]
       },
       {
-        "company": "BPMX",
+        "company": {
+          "en": "BPMX",
+          "es": "BPMX"
+        },
         "image": "/images/bpmx.webp",
         "position": {
           "en": "Java Developer",
@@ -200,8 +241,14 @@
           "es": "Agosto 2021"
         },
         "description": {
-          "en": "Worked on a private java framework and plugin. Also participated in the development of the company website.",
-          "es": "Trabajé en un framework y plugin privado de java. También participé en el desarrollo del sitio web de la empresa."
+          "en": [
+            "Maintained and extended a proprietary Java / Gradle framework used to generate business process management experiences; implemented custom solutions to developer needs.",
+            "Also contributed to the company’s React-based website."
+          ],
+          "es": [
+            "Mantuve y extendí un framework propietario en Java y Gradle usado para generar experiencias de gestión de procesos de negocio; implementé soluciones a medida según las necesidades de los desarrolladores.",
+            "También contribuí al sitio web de la empresa, desarrollado en React."
+          ]
         },
         "technologies": [
           "Java",
